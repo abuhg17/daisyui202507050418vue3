@@ -2,7 +2,7 @@ git init
 
 git add .
 
-git commit -m "202507050418 bilibili api"
+git commit -m "202507050418 v-show"
 
 git remote add origin https://github.com/abuhg17/daisyui202507050418vue3.git
 

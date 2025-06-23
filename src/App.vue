@@ -7,20 +7,74 @@ import List from "./components/List.vue";
 import Timeline from "./components/Timeline.vue";
 import Bilibili from "./components/Bilibili.vue";
 import { ref } from "vue";
-const isshowBilibili = ref(true);
+const isshowCountDown1 = ref(false);
+const isshowCountDown2 = ref(false);
+const isshowCountDown3 = ref(false);
+const isshowTimeline = ref(false);
+const isshowBilibili = ref(false);
+const isshowList = ref(false);
+const isshowHelloWorld = ref(false);
 </script>
 
 <template>
-  <CountDown1 title="🎯 倒數目標時間：2025-07-05 04:18（台灣時間）" />
-  <CountDown2 title="🎯 倒數目標時間：2025-07-05 04:18（台灣時間）" />
-  <CountDown3 title="🎯 倒數目標時間：2025-07-05 04:18（台灣時間）" />
-  <button @click="isshowBilibili = !isshowBilibili">Bilibili</button>
+  <button class="btn btn-dash" @click="isshowCountDown1 = !isshowCountDown1">
+    CountDown1
+  </button>
+  <div v-show="isshowCountDown1">
+    <CountDown1 title="🎯 倒數目標時間：2025-07-05 04:18（台灣時間）" />
+  </div>
+  <button
+    class="btn btn-dash btn-primary"
+    @click="isshowCountDown2 = !isshowCountDown2"
+  >
+    CountDown2
+  </button>
+  <div v-show="isshowCountDown2">
+    <CountDown2 title="🎯 倒數目標時間：2025-07-05 04:18（台灣時間）" />
+  </div>
+  <button
+    class="btn btn-dash btn-secondary"
+    @click="isshowCountDown3 = !isshowCountDown3"
+  >
+    CountDown3
+  </button>
+  <div v-show="isshowCountDown3">
+    <CountDown3 title="🎯 倒數目標時間：2025-07-05 04:18（台灣時間）" />
+  </div>
+  <button
+    class="btn btn-dash btn-accent"
+    @click="isshowTimeline = !isshowTimeline"
+  >
+    Timeline
+  </button>
+  <div v-show="isshowTimeline">
+    <Timeline />
+  </div>
+  <button class="btn btn-dash btn-info" @click="isshowList = !isshowList">
+    List
+  </button>
+  <div v-show="isshowList">
+    <List />
+  </div>
+  <button
+    class="btn btn-dash btn-success"
+    @click="isshowBilibili = !isshowBilibili"
+  >
+    Bilibili
+  </button>
   <div v-show="isshowBilibili">
     <Bilibili />
   </div>
-  <List />
-  <Timeline />
-  <HelloWorld msg="Vite + Vue" />
+  <button
+    class="btn btn-dash btn-warning"
+    @click="isshowHelloWorld = !isshowHelloWorld"
+  >
+    HelloWorld
+  </button>
+  <div v-show="isshowHelloWorld">
+    <HelloWorld msg="Vite + Vue" />
+  </div>
+  <button class="btn btn-dash btn-error">Error</button>
 </template>
 
 <style scoped></style>
