@@ -43,13 +43,13 @@ const bvList = [
   "BV1JtNXzkEFN",
   "BV1rEMxzyE1M",
   "BV1DHNJzqERT",
-  "",
+  "BV1pSLgz9EnQ",
 ];
 
 const videoList = ref([]);
 
 const fetchVideoStats = async (bvid) => {
-  const url = `http://localhost:3000/api/bilibili/${bvid}`;
+  const url = `/api/bilibili/${bvid}`;
   try {
     const res = await axios.get(url);
     const data = res.data;
