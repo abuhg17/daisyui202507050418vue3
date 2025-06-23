@@ -23,6 +23,9 @@ const isshowHelloWorld = ref(false);
       <li>
         <routerLink to="/about">About</routerLink>
       </li>
+      <li>
+        <routerLink to="/firebasefood">FirebaseFood</routerLink>
+      </li>
     </ul>
   </nav>
   <router-view></router-view>

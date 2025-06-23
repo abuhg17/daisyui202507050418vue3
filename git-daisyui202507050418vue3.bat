@@ -2,7 +2,7 @@ git init
 
 git add .
 
-git commit -m "202507050418 CountDown1 Page"
+git commit -m "202507050418 ↑ ↓ ← →"
 
 git remote add origin https://github.com/abuhg17/daisyui202507050418vue3.git
 
