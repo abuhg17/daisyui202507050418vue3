@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.10",
+    "axios": "^1.10.0",
     "daisyui": "^5.0.43",
     "flipdown": "^0.3.2",
     "tailwindcss": "^4.1.10",
