@@ -1,11 +1,12 @@
 // api/bilibili/[bvid].js
-const axios = require("axios");
+import axios from "axios"; // 將 require 替換為 import
 
 // Bilibili 影片資訊 API 端點
 const BILIBILI_API_URL = "https://api.bilibili.com/x/web-interface/view";
 
-module.exports = async (req, res) => {
-  const { bvid } = req.query; // Vercel Serverless Functions 使用 req.query 獲取動態路由參數
+// 將 module.exports 替換為 export default
+export default async (req, res ) => {
+  const { bvid } = req.query;
 
   if (!bvid) {
     return res
