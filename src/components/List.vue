@@ -53,6 +53,8 @@ const videoIds = [
   "sKrPgyQjv8Y",
   "nmq3I-8Izus",
   "TmbWEcs_4k0",
+  "ihJy6p71nuA",
+  "8oGdZZ9y3Uw",
 ];
 const apiBase =
   "https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=";

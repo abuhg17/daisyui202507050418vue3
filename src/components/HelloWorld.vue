@@ -4,6 +4,17 @@ import { ref } from "vue";
 defineProps({
   msg: String,
 });
+function generateRandomString(length = 11) {
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_";
+  let result = "";
+  for (let i = 0; i < length; i++) {
+    const randIndex = Math.floor(Math.random() * chars.length);
+    result += chars[randIndex];
+  }
+  return result;
+}
+
+console.log(generateRandomString()); // 範例輸出：Tm_bZazwKQe
 
 const count = ref(0);
 </script>
@@ -180,6 +191,7 @@ const count = ref(0);
     >.
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  <div v-for="num in 10">{{ generateRandomString() }}</div>
 </template>
 
 <style scoped>
