@@ -21,6 +21,64 @@ const count = ref(0);
 
 <template>
   <div class="flex w-full justify-center gap-2 py-2">
+    <div role="alert" class="alert">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        class="stroke-info h-6 w-6 shrink-0"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        ></path>
+      </svg>
+      <span> https://daisyui.com/</span>
+    </div>
+    <span class="loading loading-spinner text-primary"></span>
+    <span class="loading loading-spinner text-secondary"></span>
+    <span class="loading loading-spinner text-accent"></span>
+    <span class="loading loading-spinner text-neutral"></span>
+    <span class="loading loading-spinner text-info"></span>
+    <span class="loading loading-spinner text-success"></span>
+    <span class="loading loading-spinner text-warning"></span>
+    <span class="loading loading-spinner text-error"></span>
+    <!--
+* Import Cally web component from CDN
+<script type="module" src="https://unpkg.com/cally"></script>
+
+* Or install as a dependency:
+npm i cally
+* and import it in JS
+import "cally";
+-->
+
+    <calendar-date
+      class="cally bg-base-100 border border-base-300 shadow-lg rounded-box"
+    >
+      <svg
+        aria-label="Previous"
+        class="fill-current size-4"
+        slot="previous"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path fill="currentColor" d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+      </svg>
+      <svg
+        aria-label="Next"
+        class="fill-current size-4"
+        slot="next"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path fill="currentColor" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+      </svg>
+      <calendar-month></calendar-month>
+    </calendar-date>
+    <span class="indicator-item badge badge-secondary">12</span>
     <a href="#item1" class="btn btn-xs">1</a>
     <a href="#item2" class="btn btn-xs">2</a>
     <a href="#item3" class="btn btn-xs">3</a>
@@ -62,6 +120,7 @@ const count = ref(0);
     </div>
     <figure>
       <img
+        class="mask mask-heart"
         src="https://raw.githubusercontent.com/abuhg17/create20250705vue0418/refs/heads/main/public/MyVideoImage/%E3%81%84%E3%81%8D%E3%81%A5%E3%82%89%E3%81%84%E9%83%A8%EF%BC%81%E3%80%8CWhat%20is%20my%20LIFE_%E3%80%8D%E3%83%AA%E3%83%AA%E3%83%83%E3%82%AF%E3%83%93%E3%83%87%E3%82%AA%E3%80%90%E3%82%A4%E3%82%AD%E3%83%85%E3%83%A9%E3%82%A4%E3%83%96%EF%BC%81%20LOVELIVE!%20BLUEBIRD%E3%80%91.webp"
         alt="Shoes"
       />
@@ -70,6 +129,7 @@ const count = ref(0);
   <div class="card bg-base-100 w-96 shadow-sm">
     <figure>
       <img
+        class="mask mask-star-2"
         src="https://raw.githubusercontent.com/abuhg17/create20250705vue0418/refs/heads/main/public/MyVideoImage/%E3%81%84%E3%81%8D%E3%81%A5%E3%82%89%E3%81%84%E9%83%A8%EF%BC%81%20%E9%AB%98%E6%A9%8B%E3%83%9D%E3%83%AB%E3%82%AB%20Solo%20Song%E3%80%8C%E6%B5%85%E8%8D%89Guilty%20Girl%E3%81%AE%E6%AD%8C%E3%80%8D%E3%83%AA%E3%83%AA%E3%83%83%E3%82%AF%E3%83%93%E3%83%87%E3%82%AA%E3%80%90%E3%82%A4%E3%82%AD%E3%83%85%E3%83%A9%E3%82%A4%E3%83%96%EF%BC%81%20LOVELIVE!%20BLUEBIRD%E3%80%91.webp"
         alt="Shoes"
       />
@@ -192,6 +252,113 @@ const count = ref(0);
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
   <div v-for="num in 10">{{ generateRandomString() }}</div>
+  <div class="tooltip">
+    <button class="btn">33</button>
+    <div class="tooltip-content">
+      <div
+        class="animate-bounce text-orange-400 -rotate-10 text-2xl font-black"
+      >
+        2021年<br />33歲
+      </div>
+    </div>
+  </div>
+  <div class="tooltip">
+    <button class="btn">5 12</button>
+    <div class="tooltip-content">
+      <div
+        class="animate-bounce text-orange-400 -rotate-10 text-2xl font-black"
+      >
+        委任第五職等<br />簡任第十二職等
+      </div>
+    </div>
+  </div>
+  <div class="tooltip">
+    <button class="btn">12 18</button>
+    <div class="tooltip-content">
+      <div
+        class="animate-bounce text-orange-400 -rotate-10 text-2xl font-black"
+      >
+        臺北市第12屆市長<br />臺北市議會第18屆議員選舉選舉公報
+      </div>
+    </div>
+  </div>
+  <div class="tooltip">
+    <button class="btn">18 23</button>
+    <div class="tooltip-content">
+      <div
+        class="animate-bounce text-orange-400 -rotate-10 text-2xl font-black"
+      >
+        第18屆立法委員選舉選舉公報<br />第23任總統副總統選舉選舉公報
+      </div>
+    </div>
+  </div>
+  <div class="tooltip">
+    <button class="btn">5 23</button>
+    <div class="tooltip-content">
+      <div
+        class="animate-bounce text-orange-400 -rotate-10 text-2xl font-black"
+      >
+        女<br />5班23號<br />國中補習班同學
+      </div>
+    </div>
+  </div>
+  <div class="tooltip">
+    <button class="btn">座號和</button>
+    <div class="tooltip-content">
+      <div
+        class="animate-bounce text-orange-400 -rotate-10 text-2xl font-black"
+      >
+        男<br />1號<br />女<br />32號<br />國中同班同學
+      </div>
+    </div>
+  </div>
+  <div class="mockup-browser border border-base-300 w-full">
+    <div class="mockup-browser-toolbar">
+      <div class="input">https://daisyui.com</div>
+    </div>
+    <div class="grid place-content-center h-80">Hello!</div>
+  </div>
+  <div class="mockup-code w-full">
+    <pre data-prefix="$"><code>npm i daisyui</code></pre>
+  </div>
+  <div class="mockup-phone border-primary">
+    <div class="mockup-phone-camera"></div>
+    <div class="mockup-phone-display">
+      <img
+        alt="wallpaper"
+        src="https://raw.githubusercontent.com/abuhg17/create20250705vue0418/refs/heads/main/public/MyVideoImage/%E3%81%84%E3%81%8D%E3%81%A5%E3%82%89%E3%81%84%E9%83%A8%EF%BC%81%20%E9%AB%98%E6%A9%8B%E3%83%9D%E3%83%AB%E3%82%AB%20Solo%20Song%E3%80%8C%E6%B5%85%E8%8D%89Guilty%20Girl%E3%81%AE%E6%AD%8C%E3%80%8D%E3%83%AA%E3%83%AA%E3%83%83%E3%82%AF%E3%83%93%E3%83%87%E3%82%AA%E3%80%90%E3%82%A4%E3%82%AD%E3%83%85%E3%83%A9%E3%82%A4%E3%83%96%EF%BC%81%20LOVELIVE!%20BLUEBIRD%E3%80%91.webp"
+      />
+    </div>
+  </div>
+  <div class="mockup-phone border-primary">
+    <div class="mockup-phone-camera"></div>
+    <div class="mockup-phone-display">
+      <img
+        alt="wallpaper"
+        src="https://raw.githubusercontent.com/abuhg17/create20250705vue0418/refs/heads/main/public/MyVideoImage/%E3%81%84%E3%81%8D%E3%81%A5%E3%82%89%E3%81%84%E9%83%A8%EF%BC%81%E3%80%8CWhat%20is%20my%20LIFE_%E3%80%8D%E3%83%AA%E3%83%AA%E3%83%83%E3%82%AF%E3%83%93%E3%83%87%E3%82%AA%E3%80%90%E3%82%A4%E3%82%AD%E3%83%85%E3%83%A9%E3%82%A4%E3%83%96%EF%BC%81%20LOVELIVE!%20BLUEBIRD%E3%80%91.webp"
+      />
+    </div>
+  </div>
+  <div class="bg-orange-600">div</div>
+  <ul class="steps">
+    <li class="step step-primary">草包鋒兄</li>
+    <li class="step step-primary">國中畢業紀念冊簽名101位</li>
+    <li class="step step-primary">一般替代役入營第111梯</li>
+    <li class="step step-primary">33歲</li>
+    <li class="step step-primary">高考三級資訊處理榜首</li>
+    <li class="step">臺北市第12屆市長(候選人)</li>
+  </ul>
+  <ul class="steps steps-vertical">
+    <li class="step step-primary">草包鋒兄</li>
+    <li class="step step-primary">國中畢業紀念冊簽名101位</li>
+    <li class="step step-primary">一般替代役入營第111梯</li>
+    <li class="step step-primary">33歲</li>
+    <li class="step step-primary">高考三級資訊處理榜首</li>
+    <li class="step">臺北市第12屆市長(候選人)</li>
+  </ul>
+  <div class="navbar bg-base-100 shadow-sm">
+    <a class="btn btn-ghost text-xl">daisyUI</a>
+  </div>
 </template>
 
 <style scoped>
