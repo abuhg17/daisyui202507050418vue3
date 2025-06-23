@@ -1,50 +1,38 @@
 <template>
-  <h1>Date Time Page</h1>
+  <h1>Date Time Page 2</h1>
   <div class="flex justify-center items-center">
     <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
+      <div class="flex flex-col">
         <span class="countdown font-mono text-5xl">
           <span style="--value: 20" aria-live="polite" aria-label="20">20</span>
         </span>
         ye
       </div>
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
+      <div class="flex flex-col">
         <span class="countdown font-mono text-5xl">
           <span style="--value: 25" aria-live="polite" aria-label="25">25</span>
         </span>
         ar
       </div>
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
+      <div class="flex flex-col">
         <span class="countdown font-mono text-5xl">
           <span style="--value: 07" aria-live="polite" aria-label="07">07</span>
         </span>
         month
       </div>
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
+      <div class="flex flex-col">
         <span class="countdown font-mono text-5xl">
           <span style="--value: 05" aria-live="polite" aria-label="05">05</span>
         </span>
         day
       </div>
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
+      <div class="flex flex-col">
         <span class="countdown font-mono text-5xl">
           <span style="--value: 04" aria-live="polite" aria-label="04">04</span>
         </span>
         hour
       </div>
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
+      <div class="flex flex-col">
         <span class="countdown font-mono text-5xl">
           <span style="--value: 18" aria-live="polite" aria-label="18">18</span>
         </span>
@@ -55,9 +43,7 @@
 
   <div class="flex justify-center items-center mt-5">
     <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
+      <div class="flex flex-col">
         <span class="countdown font-mono text-5xl">
           <span
             :style="`--value: ${dtyear1}`"
@@ -68,9 +54,7 @@
         </span>
         ye
       </div>
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
+      <div class="flex flex-col">
         <span class="countdown font-mono text-5xl">
           <span
             :style="`--value: ${dtyear2}`"
@@ -81,9 +65,7 @@
         </span>
         ar
       </div>
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
+      <div class="flex flex-col">
         <span class="countdown font-mono text-5xl">
           <span
             :style="`--value: ${dtmonth}`"
@@ -94,9 +76,7 @@
         </span>
         month
       </div>
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
+      <div class="flex flex-col">
         <span class="countdown font-mono text-5xl">
           <span :style="`--value: ${dtdate}`" aria-live="polite" aria-label="05"
             >05</span
@@ -104,9 +84,7 @@
         </span>
         day
       </div>
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
+      <div class="flex flex-col">
         <span class="countdown font-mono text-5xl">
           <span :style="`--value: ${dthour}`" aria-live="polite" aria-label="04"
             >04</span
@@ -114,9 +92,7 @@
         </span>
         hour
       </div>
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
+      <div class="flex flex-col">
         <span class="countdown font-mono text-5xl">
           <span
             :style="`--value: ${dtminute}`"
@@ -127,9 +103,7 @@
         </span>
         min
       </div>
-      <div
-        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
-      >
+      <div class="flex flex-col">
         <span class="countdown font-mono text-5xl">
           <span
             :style="`--value: ${dtsecond}`"
