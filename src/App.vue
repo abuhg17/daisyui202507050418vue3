@@ -1,30 +1,15 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import CountDown1 from "./components/CountDown1.vue";
+import CountDown2 from "./components/CountDown2.vue";
+import CountDown3 from "./components/CountDown3.vue";
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
+  <CountDown1 title="🎯 倒數目標時間：2025-07-05 04:18（台灣時間）" />
+  <CountDown2 title="🎯 倒數目標時間：2025-07-05 04:18（台灣時間）" />
+  <CountDown3 title="🎯 倒數目標時間：2025-07-05 04:18（台灣時間）" />
   <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style scoped></style>
