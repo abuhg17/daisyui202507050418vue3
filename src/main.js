@@ -5,6 +5,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import AboutPage from "./views/AboutPage.vue";
 import CountDown1Page from "./views/CountDown1Page.vue";
 import FirebaseFoodPage from "./views/FirebaseFoodPage.vue";
+import DateTimePage from "./views/DateTimePage.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -20,6 +21,10 @@ const router = createRouter({
     {
       path: "/firebasefood",
       component: FirebaseFoodPage,
+    },
+    {
+      path: "/datetime",
+      component: DateTimePage,
     },
   ],
 });
