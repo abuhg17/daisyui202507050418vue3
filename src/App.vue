@@ -1,13 +1,11 @@
 <script setup>
 import HelloWorld from "./components/HelloWorld.vue";
-import CountDown1 from "./components/CountDown1.vue";
 import CountDown2 from "./components/CountDown2.vue";
 import CountDown3 from "./components/CountDown3.vue";
 import List from "./components/List.vue";
 import Timeline from "./components/Timeline.vue";
 import Bilibili from "./components/Bilibili.vue";
 import { ref } from "vue";
-const isshowCountDown1 = ref(false);
 const isshowCountDown2 = ref(false);
 const isshowCountDown3 = ref(false);
 const isshowTimeline = ref(false);
@@ -17,12 +15,17 @@ const isshowHelloWorld = ref(false);
 </script>
 
 <template>
-  <button class="btn btn-dash" @click="isshowCountDown1 = !isshowCountDown1">
-    CountDown1
-  </button>
-  <div v-show="isshowCountDown1">
-    <CountDown1 title="🎯 倒數目標時間：2025-07-05 04:18（台灣時間）" />
-  </div>
+  <nav>
+    <ul>
+      <li>
+        <routerLink to="/coutdown1">CountDown1</routerLink>
+      </li>
+      <li>
+        <routerLink to="/about">About</routerLink>
+      </li>
+    </ul>
+  </nav>
+  <router-view></router-view>
   <button
     class="btn btn-dash btn-primary"
     @click="isshowCountDown2 = !isshowCountDown2"
