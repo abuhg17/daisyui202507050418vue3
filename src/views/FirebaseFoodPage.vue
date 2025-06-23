@@ -16,12 +16,7 @@
     checked="checked"
   />統一超商
   <input type="radio" name="radio-9" class="radio radio-info" />全家便利商店
-  <input
-    type="radio"
-    name="radio-9"
-    class="radio radio-info"
-    checked="checked"
-  />來來超商
+  <input type="radio" name="radio-9" class="radio radio-info" />來來超商
   <input
     type="radio"
     name="radio-9"
