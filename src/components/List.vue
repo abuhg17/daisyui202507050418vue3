@@ -23,6 +23,7 @@ import { ref, onMounted } from "vue";
 import axios from "axios";
 
 const videoIds = [
+  "LEFRPU0b0QQ",
   "0_vfdJ_M298",
   "hnl-44mXdKI",
   "04t_L8Okvbg",
